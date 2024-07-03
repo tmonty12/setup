@@ -1,0 +1,76 @@
+{
+  "python.defaultInterpreterPath": "/Users/ishandhanani/miniconda3/envs/skypilot/bin/python",
+  "terminal.integrated.inheritEnv": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "solidity.telemetry": false,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Default Dark Modern",
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.iconTheme": "file-icons",
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#d700e5",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#d700e5",
+  "vim.easymotionMarkerForegroundColorOneChar": "#d700e5",
+  "vim.easymotionDimBackground": false,
+  "vim.useSystemClipboard": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.leader": "<tab>",
+  "vim.startInInsertMode": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [" "],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["g", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "e"],
+      "commands": ["workbench.action.navigateToLastEditLocation"]
+    },
+    {
+      "before": ["g", "p"],
+      "commands": ["editor.action.triggerParameterHints"]
+    },
+    {
+      "before": ["g", "m"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["go.test.cursorOrPrevious"]
+    }
+  ],
+  "editor.smoothScrolling": true,
+  "cmake.showOptionsMovedNotification": false,
+  "supermaven.enable": {
+    "*": true,
+    "typescriptreact": true
+  },
+  "cursor.cpp.disabledLanguages": ["python"],
+  "window.confirmSaveUntitledWorkspace": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript, typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "editor.accessibilitySupport": "off"
+}
+
