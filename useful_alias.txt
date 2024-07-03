@@ -1,18 +1,13 @@
 # git aliases
-alias ai="./inshella"
 alias ga="git add"
 alias gc="git commit -m"
 alias gps="git push"
 alias gs="git status"
 alias gpl="git pull"
 alias ll="ls -al"
-alias gck="git checkout"
+alias gco="git checkout"
 alias gf="git fetch"
 alias gcb="git checkout -b"
-
-# jupyter notebook convert aliases
-alias jclear="jupyter nbconvert --to html --clear-output"
-alias jhtml="jupyter nbconvert --to html --output"
 
 #brev aliases
 alias brs="brev refresh && brev ls"
@@ -23,15 +18,11 @@ alias sourcez="source ~/.zshrc"
 
 #go to directory alias
 alias gobrev="cd ~/Desktop/brevrepos"
-alias dp="cursor ~/Desktop/brevrepos/dev-plane"
-alias bd="cursor ~/Desktop/brevrepos/brev-deploy"
-alias csl="cursor ~/Desktop/brevrepos/console"
-alias vrb="cursor ~/Desktop/brevrepos/verb"
 alias goplay="cd ~/Desktop/playground"
-alias cli="cursor ~/Desktop/brevrepos/brev-cli"
 alias godesk="cd ~/Desktop"
 alias gorepos="cd ~/Desktop/repos"
 alias nb="cd ~/Desktop/brevrepos/notebooks"
+
 # alias for run cmds
 alias nrs="npm run start"
 alias nrsl="npm run start:local"
