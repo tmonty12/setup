@@ -11,3 +11,9 @@ Quick way to setup a new machine to make it feel like home
 # VSCode/Cursor
 
 1. Use the settings.json and add to user settings
+
+# Apps
+
+1. Arc 
+2. 1P
+3. Iterm2
