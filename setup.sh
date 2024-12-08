@@ -23,41 +23,7 @@ syntax on
 :colorscheme jellybeans
 EOL
 
-# First, remove any existing PS1 exports from .bashrc
-sed -i '/^export PS1=/d' ~/.bashrc
-
-# Remove zsh-related installations and configurations
-# Instead, set up a git-aware PS1 for bash
-cat >> ~/.bashrc << 'EOL'
-
-# Git aware prompt
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-# Colors for PS1
-BLUE="\[\033[01;34m\]"
-GREEN="\[\033[01;32m\]"
-YELLOW="\[\033[01;33m\]"
-RESET="\[\033[00m\]"
-
-# Set PS1 with username@host, current directory, and git branch
-PS1="${GREEN}\u@\h${RESET}:${BLUE}\w${YELLOW}\$(parse_git_branch)${RESET}\$ "
-
-# Environment variables
-export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
-
-# Go setup
-export GOPATH=$HOME/go
-export PATH=$PATH:$HOME/go/bin
-
-# Aliases
-alias ll='ls -la'
-alias ..='cd ..'
-alias ...='cd ../..'
-EOL
-
-# Source bashrc immediately
-source ~/.bashrc
+# Install cgpt
+go install github.com/tmc/cgpt/cmd/cgpt@latest
 
 echo "Setup complete! Your prompt should be updated now."
