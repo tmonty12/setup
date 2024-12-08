@@ -23,6 +23,9 @@ syntax on
 :colorscheme jellybeans
 EOL
 
+# First, remove any existing PS1 exports from .bashrc
+sed -i '/^export PS1=/d' ~/.bashrc
+
 # Remove zsh-related installations and configurations
 # Instead, set up a git-aware PS1 for bash
 cat >> ~/.bashrc << 'EOL'
@@ -39,7 +42,7 @@ YELLOW="\[\033[01;33m\]"
 RESET="\[\033[00m\]"
 
 # Set PS1 with username@host, current directory, and git branch
-export PS1="${GREEN}\u@\h${RESET}:${BLUE}\w${YELLOW}\$(parse_git_branch)${RESET}\$ "
+PS1="${GREEN}\u@\h${RESET}:${BLUE}\w${YELLOW}\$(parse_git_branch)${RESET}\$ "
 
 # Environment variables
 export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
@@ -54,4 +57,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 EOL
 
-echo "Setup complete! Please restart your shell or run 'source ~/.bashrc' to apply changes."
+# Source bashrc immediately
+source ~/.bashrc
+
+echo "Setup complete! Your prompt should be updated now."
