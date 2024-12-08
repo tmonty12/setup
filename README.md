@@ -12,3 +12,8 @@ Small repo to keep track of how I setup my mac but also a collection of dotfiles
 6. Install Rectangle
 7. Install Cursor
     - Use the settings.json and add to user settings
+
+# Setup a remote VM for dev
+```bash
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/main/setup.sh | bash
+```
