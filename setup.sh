@@ -4,17 +4,16 @@
 echo "Please enter your Anthropic API key:"
 read -r ANTHROPIC_API_KEY
 
-# Install required packages
-if command -v apt-get &> /dev/null; then
-    sudo apt-get update
-    sudo apt-get install -y curl git zsh vim golang
-elif command -v yum &> /dev/null; then
-    sudo yum update -y
-    sudo yum install -y curl git zsh vim golang
-else
-    echo "Unsupported package manager. Please install curl, git, zsh, vim, and golang manually."
-    exit 1
-fi
+# Set git config
+git config --global user.name "ishandhanani"
+git config --global user.email "ishandhanani@gmail.com"
+echo "Git config set successfully!"
+
+# Install go
+sudo snap install go --classic
+
+# Install uv for python
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Setup Vim with jellybeans theme
 mkdir -p ~/.vim/colors
