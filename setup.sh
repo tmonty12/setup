@@ -32,7 +32,7 @@ fi
 
 # Setup Zsh as default shell
 if [ "$SHELL" != "$(which zsh)" ]; then
-    chsh -s "$(which zsh)"
+    sudo chsh -s "$(which zsh)" ubuntu
 fi
 
 go install github.com/tmc/cgpt/cmd/cgpt@latest
