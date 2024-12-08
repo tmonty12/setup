@@ -23,31 +23,35 @@ syntax on
 :colorscheme jellybeans
 EOL
 
-# Check and install Zsh if not present
-if ! command -v zsh &> /dev/null; then
-    echo "Installing zsh..."
-    sudo apt-get update
-    sudo apt-get install -y zsh
-fi
+# Remove zsh-related installations and configurations
+# Instead, set up a git-aware PS1 for bash
+cat >> ~/.bashrc << 'EOL'
 
-# Setup Zsh as default shell
-if [ "$SHELL" != "$(which zsh)" ]; then
-    sudo chsh -s "$(which zsh)" ubuntu
-fi
+# Git aware prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 
-go install github.com/tmc/cgpt/cmd/cgpt@latest
+# Colors for PS1
+BLUE="\[\033[01;34m\]"
+GREEN="\[\033[01;32m\]"
+YELLOW="\[\033[01;33m\]"
+RESET="\[\033[00m\]"
 
-# Create .zshrc with Anthropic API key
-cat > ~/.zshrc << EOL
+# Set PS1 with username@host, current directory, and git branch
+export PS1="${GREEN}\u@\h${RESET}:${BLUE}\w${YELLOW}\$(parse_git_branch)${RESET}\$ "
+
 # Environment variables
 export ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY}"
 
 # Go setup
-export GOPATH=\$HOME/go
-export PATH=\$PATH:\$GOPATH/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$HOME/go/bin
+
+# Aliases
+alias ll='ls -la'
+alias ..='cd ..'
+alias ...='cd ../..'
 EOL
 
-# Install Oh My Zsh (optional)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-echo "Setup complete! Please restart your shell or run 'source ~/.zshrc' to apply changes."
+echo "Setup complete! Please restart your shell or run 'source ~/.bashrc' to apply changes."
