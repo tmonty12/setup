@@ -15,5 +15,5 @@ Small repo to keep track of how I setup my mac but also a collection of dotfiles
 
 # Setup a remote VM for dev
 ```bash
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/main/setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup.sh | bash
 ```
