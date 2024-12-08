@@ -28,7 +28,7 @@ go install github.com/tmc/cgpt/cmd/cgpt@latest
 
 # Create config.yaml with API key
 cat > ~/config.yaml << EOL
-anthropicAPIKey=${ANTHROPIC_API_KEY}
+anthropicAPIKey: "${ANTHROPIC_API_KEY}"
 EOL
 
 echo "Setup complete! Set your Anthropic API key to use cgpt."
