@@ -42,4 +42,4 @@ parse_git_branch() {
 export PS1="\[\033[01;32m\]\u(ishan)\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
 EOL
 
-echo "Setup complete! Set your Anthropic API key to use cgpt."
+echo "Setup complete! Run 'source ~/.bashrc' to apply changes."
