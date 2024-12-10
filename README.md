@@ -17,3 +17,8 @@ Small repo to keep track of how I setup my mac but also a collection of dotfiles
 ```bash
 curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup.sh | bash
 ```
+
+# Grab vim config only in a container or vm for easy dev
+```bash
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-vim.sh | bash
+```
