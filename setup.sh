@@ -6,7 +6,7 @@ git config --global user.email "ishandhanani@gmail.com"
 echo "Git config set successfully!"
 
 # Install go
-sudo snap install go --classic
+sudo snap install go --classic 
 
 # Install uv for python
 curl -LsSf https://astral.sh/uv/install.sh | sh
