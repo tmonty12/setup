@@ -23,8 +23,4 @@ syntax on
 :colorscheme jellybeans
 EOL
 
-# Install supertab for tab completions
-mkdir -p ~/.vim/pack/plugins/start
-git clone --depth=1 https://github.com/ervandew/supertab.git ~/.vim/pack/plugins/start/supertab
-
 echo "Setup complete! Your Vim is now configured with jellybeans theme. You can use tab to autocomplete"

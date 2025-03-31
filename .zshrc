@@ -3,7 +3,11 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%f '
 setopt PROMPT_SUBST
-PS1='%F{magenta}ishan%f:%F{cyan}%~%f ${vcs_info_msg_0_}%F{green}$%f '
+PS1='%F{magenta}ishan-mbp%f:%F{cyan}%~%f ${vcs_info_msg_0_}%F{green}$%f '
+
+# Add colors to my ls output
+export CLICOLOR=1
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 #go bin
 export PATH=$PATH:~/go/bin
@@ -15,10 +19,12 @@ alias gc="git commit -m"
 alias gps="git push"
 alias gs="git status"
 alias gpl="git pull"
-alias ll="ls -al"
+alias ll="ls -alh"
 alias gco="git checkout"
 alias gf="git fetch"
 alias gcb="git checkout -b"
+alias gp="git push"
+alias gd="git diff"
 
 # open up zshrc and edit alias
 alias editz="vim ~/.zshrc"
@@ -35,6 +41,7 @@ alias godown="cd /Users/ishandhanani/Downloads"
 
 # cgpt
 export ANTHROPIC_API_KEY=""
+export GOOGLE_API_KEY=""
 alias ai="cgpt -c"
 
 # git commit helpers
@@ -107,3 +114,5 @@ EOF
     echo "$pr_content"
 }
 
+
+. "$HOME/.local/bin/env"
