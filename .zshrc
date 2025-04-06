@@ -1,4 +1,7 @@
 # PS1
+
+export ME=$(whoami)
+
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%f '
@@ -35,8 +38,8 @@ alias speed="speedtest"
 alias m="make"
 
 # nav
-alias godesk="cd /Users/ishandhanani/Desktop"
-alias godown="cd /Users/ishandhanani/Downloads"
+alias godesk="cd /Users/$ME/Desktop"
+alias godown="cd /Users/$ME/Downloads"
 
 # cgpt
 export ANTHROPIC_API_KEY=""
