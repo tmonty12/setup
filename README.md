@@ -12,6 +12,12 @@
    - Use the settings.json and add to user settings
 8. Change cursor speed to fast in system settings
 
+Setup zsh
+
+```bash
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-zsh.sh | bash
+```
+
 # Setting up a new linux dev box
 
 ```bash
