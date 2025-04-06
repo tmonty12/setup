@@ -1,8 +1,6 @@
-# Machine setup
+# Setup
 
-Small repo to keep track of how I setup my mac but also a collection of dotfiles that I use to setup new virtual machines
-
-# Applications
+# Setting up a new mac
 
 1. Install Chome/Arc
 2. Download Raycast -> turn off spotlight search -> map Raycast to cmd-space
@@ -12,11 +10,19 @@ Small repo to keep track of how I setup my mac but also a collection of dotfiles
 6. Install Rectangle
 7. Install Cursor
    - Use the settings.json and add to user settings
+8. Change cursor speed to fast in system settings
 
-# Setup a remote VM for dev (1 time)
+# Setting up a new linux dev box
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup.sh | bash
+# setup bash with git aware PS1
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-bash.sh | bash
+
+# setup vim
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-vim.sh | bash
+
+# setup tools
+curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-tools.sh | bash
 ```
 
 # Grab vim config only in a container or vm for easy dev
@@ -25,4 +31,6 @@ curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/s
 curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-vim.sh | bash
 ```
 
-ripgrep
+# Current new tools
+
+1. bat over cat

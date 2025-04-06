@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# Set git config
-git config --global user.name "ishandhanani"
-git config --global user.email "ishandhanani@gmail.com"
-echo "Git config set successfully!"
-echo "Please set GPG key to enable signed commits"
-
-# Install go
-sudo snap install go --classic 
-
-# Install uv for python
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
 # Setup Vim with jellybeans theme
 mkdir -p ~/.vim/colors
 cd ~/.vim/colors || exit
