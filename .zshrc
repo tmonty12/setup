@@ -24,7 +24,6 @@ alias gco="git checkout"
 alias gf="git fetch"
 alias gcb="git checkout -b"
 alias gp="git push"
-alias gd="git diff"
 
 # open up zshrc and edit alias
 alias editz="vim ~/.zshrc"
@@ -42,7 +41,12 @@ alias godown="cd /Users/ishandhanani/Downloads"
 # cgpt
 export ANTHROPIC_API_KEY=""
 export GOOGLE_API_KEY=""
+
 alias ai="cgpt -c"
+alias gocgpt="cd ~/.cgpt"
+
+# go dev
+alias goi="go install ./..."
 
 # git commit helpers
 # git commit helpers
@@ -50,7 +54,7 @@ function git_ai_commit() {
     if ! git diff --cached --quiet; then
         # Send the prompt to cgpt via stdin but redirect stderr to /dev/null
         # This way we only capture the actual response
-        commit_msg=$(cgpt << EOF 2>/dev/null
+        commit_msg=$(cgpt --no-history << EOF 2>/dev/null
 Generate a semantic commit message following the format: type(scope): description
 Common types: feat, fix, docs, style, refactor, test, chore
 Here are the staged files:
@@ -107,7 +111,7 @@ Be concise but descriptive in your response.
 EOF
 )
     # Generate PR content using cgpt
-    pr_content=$(cgpt << EOF 2>/dev/null
+    pr_content=$(cgpt --no-history << EOF 2>/dev/null
 $pr_prompt
 EOF
 )
@@ -116,3 +120,7 @@ EOF
 
 
 . "$HOME/.local/bin/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
