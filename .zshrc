@@ -37,6 +37,9 @@ alias c="cursor ."
 alias speed="speedtest"
 alias m="make"
 
+# alt shell tools
+alias cat="bat --style=plain"
+
 # nav
 alias godesk="cd /Users/$ME/Desktop"
 alias godown="cd /Users/$ME/Downloads"
