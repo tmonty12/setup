@@ -8,9 +8,13 @@ if [ -f ~/.zshrc ]; then
     cp ~/.zshrc ~/.zshrc.backup
 fi
 
-# Fetch the .zshrc from the GitHub repository
+# Get current user
+CURRENT_USER=$(whoami)
+
+# Fetch the .zshrc from the GitHub repository and replace ME variable
 echo "Fetching .zshrc from GitHub repository..."
 curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/main/.zshrc -o ~/.zshrc
+sed -i '' "s/export ME=\$(whoami)/export ME=\"$CURRENT_USER\"/" ~/.zshrc
 
 # Setup Vim with jellybeans theme
 mkdir -p ~/.vim/colors
