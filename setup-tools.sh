@@ -49,10 +49,20 @@ setup_languages() {
         echo "UV is already installed."
     fi
 
-    # Install bat 
+    # Install bat
     if ! command -v bat &> /dev/null; then
         echo "Installing bat..."
-        sudo apt install bat
+        # Check OS type
+        if [[ "$OSTYPE" == "darwin"* ]]; then
+            # macOS
+            brew install bat
+        elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+            # Linux
+            sudo apt install bat
+        else
+            echo "Unsupported operating system"
+            exit 1
+        fi
     else
         echo "bat is already installed."
     fi
