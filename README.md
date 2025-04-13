@@ -15,26 +15,26 @@
 Setup zsh
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-zsh.sh | bash
+curl -sSL https://raw.githubusercontent.com/tmonty12/setup/refs/heads/main/setup-zsh.sh | bash
 ```
 
 # Setting up a new linux dev box
 
 ```bash
 # setup bash with git aware PS1
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-bash.sh | bash
+curl -sSL https://raw.githubusercontent.com/tmonty12/setup/refs/heads/main/setup-bash.sh | bash
 
 # setup vim
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-vim.sh | bash
+curl -sSL https://raw.githubusercontent.com/tmonty12/setup/refs/heads/main/setup-vim.sh | bash
 
 # setup tools
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-tools.sh | bash
+curl -sSL https://raw.githubusercontent.com/tmonty12/setup/refs/heads/main/setup-tools.sh | bash
 ```
 
 # Grab vim config only in a container or vm for easy dev
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ishandhanani/setup/refs/heads/main/setup-vim.sh | bash
+curl -sSL https://raw.githubusercontent.com/tmonty12/setup/refs/heads/main/setup-vim.sh | bash
 ```
 
 # Current new tools

@@ -4,13 +4,13 @@ export ME=$(whoami)
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%f '
+zstyle ':vcs_info:git:*' formats '%F{red}(%b)%f '  # Light blue git branch
 setopt PROMPT_SUBST
-PS1='%F{magenta}ishan-mbp%f:%F{cyan}%~%f ${vcs_info_msg_0_}%F{green}$%f '
+PS1='%F{#008080}$ME%f:%F{#6a8e23}%~%f ${vcs_info_msg_0_}%F{#008000}$%f '  # Teal username, yellow-green path, green $
 
 # Add colors to my ls output
 export CLICOLOR=1
-export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+export LSCOLORS=ExfxCxDxBxegedabagaced
 
 #go bin
 export PATH=$PATH:~/go/bin
@@ -123,9 +123,6 @@ EOF
 )
     echo "$pr_content"
 }
-
-
-. "$HOME/.local/bin/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
